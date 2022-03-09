@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo-sb
+  name: demo-sb
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-sb
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: demo-sb
+    spec:
+      containers:
+      - image: aishwaryasarath/kubernetes:demo-sb-k8sj8
+        name: kubernetes
+        resources: {}
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: demo-sb
+  name: demo-sb
+spec:
+  ports:
+  - name: 8080-8080
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: demo-sb
+  type: ClusterIP
+status:
+  loadBalancer: {}
