@@ -1,4 +1,5 @@
-![Docker version](https://img.shields.io/docker/v/aishwaryasarath/kubernetes?style=plastic)
+
+![Docker Image Version (latest by date)](https://img.shields.io/docker/v/aishwaryasarath/kubernetes?style=plastic)
 # springboot-k8sdemo
 Deploying a simple springboot restful app to Kubernetes
 
